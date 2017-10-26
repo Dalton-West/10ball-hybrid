@@ -1,0 +1,107 @@
+﻿body
+{
+     margin: 0;
+}
+#header {
+    background-color: black;
+}
+#navigate {
+    width: 100%;
+}
+#contnent {}
+.fill-page{
+    min-height: 100vh;
+}
+.footer-custom {
+    color: snow;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.footer-pt1 {
+    height:auto;
+}
+.footer-pt2 {
+    height: 20px;
+}
+.pg-active {
+	color: white;
+    background-color: black;
+}
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+		height: 5px;
+		border-top: 0;
+		background: #c4e17f;
+		border-radius: 5px;
+		background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+        background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+        background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+        background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/* Login Form CSS*/
+
+@media (min-width: 576px) {
+    ._row-md-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+._login ._authTitle {
+    text-align: center;
+	line-height: 300%;
+}
+	
+._login ._socialButtons button {
+	color: white; /* In yourUse @body-bg */
+	opacity:0.85;
+}
+._login ._socialButtons button:hover {
+    color: white;
+	opacity:1;    	
+}
+._login ._socialButtons ._btn-facebook {background: #3b5998;}
+._login ._socialButtons ._btn-google {background: #c32f10;}
+
+
+._login ._loginOr {
+	position: relative;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+._login ._loginOr ._hrOr {
+	background-color: #cdcdcd;
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+._login ._loginOr ._spanOr {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -0.6em;
+	margin-left: -1.5em;
+	background-color: white;
+	width: 3em;
+	text-align: center;
+}			
+
+._login ._loginForm .input-group.i {
+	width: 2em;
+}
+._login ._loginForm  .help-block {
+    color: red;
+}
+
+@media (min-width: 576px) {
+    ._login ._forgotPwd {
+        text-align: right;
+		margin-top:10px;
+ 	}		
+}
+/* END Login Form CSS*/

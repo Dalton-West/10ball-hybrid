@@ -1,0 +1,86 @@
+.header-left-side {
+    display: inline-block;
+}
+.logo {    
+	height: 45px;
+    float: left;
+    margin: 19px 10px 10px 10px;
+}
+.header-title {
+	font-family: 'Alegreya SC';
+	display: inline-block;
+    margin: 17px 0;
+}
+.sub-title {
+    opacity: 0.6;
+    font-size: 12px;
+    margin: 0px 0 10px 15px;
+}
+.nav-link-container {
+	text-align: center; 
+	padding: 15px;
+	width: calc(100% - 30px);
+	box-shadow: 0 4px 2px -2px #00aaee;
+}
+.nav-link {
+	font-family: 'Alegreya SC';
+	text-align: right;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+    margin: 10px 5px;
+    cursor: pointer;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.nav-link.active {
+	color:#212121;
+	background-color: aliceblue;
+	border-radius: 50%;
+}
+
+.nav-link:hover{
+	color:#00aaef;
+}
+
+.button-container {
+	display: inline-block;
+    width: 100%;
+    text-align: right;
+    min-width: 195px;
+}
+
+.button-container button {
+	height: 40px;
+    font-weight: bold;
+    padding: 0 16px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+.user-identifier {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    color: aliceblue;
+    font-size: 9px;
+}
+
+.user-identifier .displayname {
+    display: inline-block;
+}
+.user-identifier a{
+    text-decoration: underline;
+    margin: 0 5px 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media screen and (min-width: 520px) {
+    .button-container{
+        width: calc(100% - 320px);
+    }
+}

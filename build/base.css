@@ -1,0 +1,53 @@
+/*
+light blue: #00aaef;
+dark-gray: color: #212121;
+light-gray: #c0c0c0;
+*/
+
+/*
+  Temp message styles.
+*/
+body{ height: 100%; border-top: 27px groove #00aaef; background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+html{ height: 100%; }
+.page-row{ width: calc(100% - 20px); padding: 10px; }
+.page-padding{padding: 15px; max-width: 600px; margin: 0 auto;}
+.bg-dark-gray{background-color: #212121}
+.bg-light-gray{background-color: #c0c0c0}
+.light-blue-bg{background-color: #00aaef;}
+.yellow-bg{background-color: #ffa100;}
+.shadow-light-blue{box-shadow: 0 1px 3px #00aaef;}
+.text-dark{color:#212121;}
+.centered{text-align:center;}
+.toTheRight{float: right;}
+.link{font-weight:bold; text-decoration: underline; color: #00aaef; cursor: pointer;}
+.message {     background: white;
+    max-width: 550px;
+    margin: 45px auto 16px;
+    padding: 32px 24px;
+    border-radius: 3px;}
+.message h2 { color: #00aaef; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+.message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+.message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+.message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+.message, .message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); margin-top:10px;}
+
+.bullet {color: #ffa100;}
+
+.main-header{
+  text-align:center;
+}
+
+#page-content {
+	min-height:100%;
+}
+
+.info{
+  max-width: 600px;
+  font-size: 18px;
+  margin:0 auto;
+}
+
+@media (max-width: 600px) {
+  .pageRow{padding: 10px 0;  text-align:center; max-width: 600px;  margin:0 auto; }	
+  body, #message { margin-top: 0; background: white; box-shadow: none; }
+}

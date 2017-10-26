@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="/src/templates/modules/header/header.css">
+<div class="page-row bg-light-gray">
+	<div class="logged-in-container user-identifier">
+		<a id="displayname-header" onclick="router.changePage('currentUser')"></a>
+		<a onclick="_User.logout()">Log Out</a>
+	</div>
+	<div class="header-left-side">
+		<img class="logo" src="/img/ghost-960_720.png"/>
+		<h1 class="header-title text-dark">The Ghost Tour</h1>
+		<h4 class="sub-title">Real Pool. Real Money. Real Competition.</h4>
+	</div>
+	<div class="button-container login-container">
+		<button class="login-button yellow-bg" onclick="router.changePage('login')">
+			Log in
+		</button>
+
+		<button class="login-button yellow-bg" onclick="router.changePage('signup')">
+			Sign up
+		</button>
+	</div>
+	<div class="button-container logged-in-container">
+		<button class="purchase yellow-bg" onclick="router.changePage('ticket')">
+			Buy a Ticket
+		</button>
+	</div>
+	<div class="button-container enter-tournament-container">
+		<button class="enter-tournament yellow-bg" onclick="router.changePage('tournaments')">
+			Enter a Tournament
+		</button>
+	</div>
+</div>
+
+
+
+<div class="page-row bg-dark-gray nav-link-container">
+	<a id="nav-home" class="nav-link" onclick="router.changePage('home')">Home</a>
+	<a id="nav-tournaments" class="nav-link" onclick="router.changePage('tournaments')">Tournaments</a>
+	<a id="nav-players" class="nav-link" onclick="router.changePage('players')">Players</a>
+	<a id="nav-rules" class="nav-link" onclick="router.changePage('rules')">Rules</a>
+	<a id="nav-handicap" class="nav-link" onclick="router.changePage('handicap')">Handicap Conversion</a>
+	<a id="nav-payout" class="nav-link" onclick="router.changePage('payout')">Payouts</a>
+</div>
+
+
+
+
