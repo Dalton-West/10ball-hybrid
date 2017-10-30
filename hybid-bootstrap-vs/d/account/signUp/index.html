@@ -17,6 +17,11 @@
     <script src="../../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../../src/css/font-awesome.css">
+    <!-- Configure Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="../../../src/js/app_config.js"></script>
+    <script src="signUp.js"></script>
 </head>
 <body>
     <section id="header">
@@ -97,7 +102,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3" required>
+                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
                     </div>
                     <div class="form-group">
                         <input type="email" name="userEmal" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4" required>
@@ -105,7 +110,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" required>
+                                <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6">
@@ -120,7 +125,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" onclick="registerUser()"></div>
+                        <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" id="regBTN"></div>
                         <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div>
                     </div>
                 </form>

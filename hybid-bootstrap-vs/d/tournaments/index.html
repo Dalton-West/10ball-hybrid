@@ -17,6 +17,10 @@
     <script src="../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../src/css/font-awesome.css">
+    <!-- Configure Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="../../src/js/app_config.js"></script>
 </head>
 <body>
     <section id="header">
@@ -86,7 +90,132 @@
 	  <p>Before you enter make sure to look up your handicap. Make sure you test your device to make 
 	  sure the video function works. We recomend, but we do not require, printing out a score sheet to use while you compete.
             </p><h3>Click on a ticket below to enter a tournament</h3><br>
-
+                    <div class="col-md-12"><h5>7 Foot Table Tournaments</h5></div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card-header text-center">
+    							<b>Monthly Tournament</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 7' Monthly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 7 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-header text-center">
+    							<b>Weekly Tournament</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 7' Weekly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 7 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+                        <div class="col-md-12"><br><h5>8 Foot Table Tournaments</h5></div>
+						<div class="col-md-6">
+						<div class="card-header text-center">
+    							<b>Monthly</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 8' Monthly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 8 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+						<div class="col-md-6">
+						<div class="card-header text-center">
+    							<b>Weekly</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 8' Weekly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 8 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+                        <div class="col-md-12"><br><h5>9 Foot Table Tournaments</h5></div>
+						<div class="col-md-6">
+						<div class="card-header text-center">
+    							<b>Monthly</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 9' Mothly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 9 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+						<div class="col-md-6">
+						<div class="card-header text-center">
+    							<b>Weekly</b>
+  							</div>
+							    <div class="card card-success">
+      							<div class="card-block" style="color: snow;">
+       							 <h5 class="card-title">Admit One 9' Weekly Tournament</h5>
+       							 <p class="card-text">To Play in this tournament you must</p>
+     							 </div>
+									<div class="card-block" style="margin: 0; padding: 0;">
+										<ul class="list-group list-group-flush">
+    										<li class="list-group-item">Play on a 9 foot long table!</li>
+    										<li class="list-group-item">Dapibus ac facilisis in</li>
+										</ul>
+									</div>
+									<div class="card-block text-right">
+										<a href="#" class="btn btn-outline-primary">Go somewhere</a>
+									</div>
+   								</div>
+						</div>
+						<div class="col-md-12"><br></div>
+					</div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
                     <!-- Right Box Pannel -->
