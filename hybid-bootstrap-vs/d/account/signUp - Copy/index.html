@@ -17,7 +17,11 @@
     <script src="../../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../../src/css/font-awesome.css">
-
+    <!-- Configure Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="../../../src/js/app_config.js"></script>
+    <script src="signUp.js"></script>
 </head>
 <body>
     <section id="header">
@@ -74,27 +78,27 @@
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-right: solid black 2px;">
                     <!-- Left Box Pannel -->
 					<div id="left_content_box">
-						<div class="row"> <img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
-							<img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid"/>
-							<img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
-						</div>
+						<br>
+						<img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
+						<img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid"/>
+						<img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
 					</div>
 					
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
                     <!-- Content Box -->
-                    <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
+                    <form role="form" id="registerForm" name="registerForm" onsubmit="return signUpUser()">
                     <h2>Please Sign Up <small>Welcome to The Ghost Tour</small></h2>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1" required>
                                 <div id="fName-error" class="error-message"></div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" required>
                                 <div id="lName-error" class="error-message"></div>
                             </div>
                         </div>
@@ -104,28 +108,69 @@
                         <div id="displayName-error" class="error-message"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                        <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4" required>
                         <div id="userEmail-error" class="error-message"></div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
-								<div id="userPassword-error" class="error-message"></div>
-                            </div>
-                        </div>
-                        <!--<div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
                                 <div id="userPassword-error" class="error-message"></div>
                             </div>
-                        </div>-->
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                                <div id="passwordConfirmation-error" class="error-message"></div>
+                            </div>
+                        </div>
                     </div>
-                <div class="row">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5>We Need Just A bit More Information! </h5><small>We will use your mailing address in the event you win the tournament. We need to know where to send the check.</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="street1" id="street1" class="form-control input-lg" placeholder="Address Line 1" tabindex="4" required>
+                        <div id="street1-error" class="error-message"></div>                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="street2" id="street2" class="form-control input-lg" placeholder="Address Line 2 (APT #/SPC/SUITE #)" tabindex="4" required>
+                        <div id="street2-error" class="error-message"></div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="city" id="city" class="form-control input-lg" placeholder="City/Town" tabindex="4" required>
+                                <div id="city-error" class="error-message"></div>                        
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="state" id="state" class="form-control input-lg" placeholder="State/Province" tabindex="4" required>
+                                <div id="state-error" class="error-message"></div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="zip" id="zip" class="form-control input-lg" placeholder="Zip Code/ Postal Code" tabindex="4" required>
+                                <div id="zip-error" class="error-message"></div>                        
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="4" required>
+                                <div id="country-error" class="error-message"></div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                             By clicking <strong>Register</strong>, you are agreeing to the <a href="#" data-toggle="modal" data-target="#termsAndConditions">Terms and Conditions</a> set out by this site, including our Cookie Use.<br>
                         </div>
-                </div>
+                    </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" id="regBTN"></div>
                         <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div>
@@ -140,12 +185,11 @@
 					</div>
 					<div class="row btn-social-media">
 						<div class="col-xs-6 col-sm-6">
-							<button class="btn btn-lg btn-block btn-facebook" onclick="signupWithFacebook()"><i class="fa fa-facebook visible-xs" id="fbBtn"></i> <span class="hidden-sm-down">Facebook</span></button>
+							<button class="btn btn-lg btn-block btn-facebook" onclick="signupWithFacebook()"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
 						</div>
 					<div class="col-xs-6 col-sm-6">
-						<button class="btn btn-lg btn-block btn-google" onclick="signupWithGoogle()"><i class="fa fa-google-plus visible-xs" id="googleBtn"></i> <span class="hidden-sm-down">Google</span></button>
+						<button class="btn btn-lg btn-block btn-google" onclick="signupWithGoogle()"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
 					</div>
-						<br>
 					</div>
 					<!--  Terms and Conditions -->
 						<div aria-hidden="true" aria-labelledby="terms" class="modal fade" id="termsAndConditions" role="dialog" tabindex="-1">
@@ -186,8 +230,8 @@
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
                     <!-- Right Box Pannel -->
 					<div id="advert_box_right">
-						<div class="row">
-						<a href="http://www.muellers.com/" target="_blank">
+						<br>
+					<a href="http://www.muellers.com/" target="_blank">
                         <img src="../../../img/right_side_adverts/Muellers-Logo-Md.png" alt="Advertier Muellers Logo" class="img-fluid" height="150">
                     </a>
                     <a href="https://cuestix.com/" target="_blank">
@@ -198,7 +242,7 @@
                     </a>
                     <a href="http://www.1stpawnllc.com" target="_blank">
                         <img src="../../../img/right_side_adverts/1stpawnlogo-gray_1_orig.jpg" alt="Advertiser First Pawn LLC" class="img-fluid" height="150"/>
-						</a></div>
+						</a>
 					</div>
                 </div>
             </div>
@@ -233,10 +277,5 @@
             </footer>
         </div>
     </section>
-        <!-- Configure Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-    <script src="../../../src/js/app_config.js"></script>
-    <script src="signUp.js"></script>
 </body>
 </html>

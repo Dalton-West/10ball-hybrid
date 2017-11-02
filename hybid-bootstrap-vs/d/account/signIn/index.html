@@ -17,6 +17,8 @@
     <script src="../../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../../src/css/font-awesome.css">
+    <script src="../../../src/js/app_config.js"></script>
+    <script src="signIn.js"></script>
 </head>
 <body>
     <section id="header">
@@ -82,7 +84,7 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
                     <!-- Content Box -->
-					<form role="form" id="loginForm" method="post">
+					<form role="form" id="loginForm" method="post" onsubmit="return logIn()">
                     <h2>Welcome Back<small> Please Login or <a href="../signUp/index.html">Sign up</a></small></h2>
                     <div class="form-group">
                         <input type="email" name="loginEmal" id="loginEmail" class="form-control input-lg" placeholder="Email Address" required="">
@@ -108,10 +110,10 @@
 			</div>
 			<div class="row btn-social-media">
 				<div class="col-xs-6 col-sm-6">
-					<button class="btn btn-lg btn-block btn-facebook" onclick="signupWithFacebook()"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
+					<button class="btn btn-lg btn-block btn-facebook" onclick="loginWithFacebook()"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
 				</div>
 				<div class="col-xs-6 col-sm-6">
-					<button class="btn btn-lg btn-block btn-google" onclick="signupWithGoogle()"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
+					<button class="btn btn-lg btn-block btn-google" onclick="loginWithGoogle()"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
 				</div>
 			</div>
                 </div>

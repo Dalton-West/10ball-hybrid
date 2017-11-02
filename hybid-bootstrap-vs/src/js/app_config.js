@@ -9,5 +9,3 @@
     messagingSenderId: "48314393073"
   };
   firebase.initializeApp(config);
-// Initialize Cloud Firestore through Firebase
-var db = firebase.firestore();

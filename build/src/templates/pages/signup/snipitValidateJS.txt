@@ -1,0 +1,102 @@
+// Get Text Fields
+/*var fName = document.forms["registerForm"]["fName"];
+var lName = document.forms["registerForm"]["lName"];
+var displayName = document.forms["registerForm"]["displayName"];
+var email = document.forms["registerForm"]["userEmail"];
+var password = document.forms["registerForm"]["userPassword"];
+var passwordConfirm = document.forms["registerForm"]["passwordConfirmation"];
+*/
+var fName = document.getElementById("firstName");
+var lName = document.getElementById("lastName");
+var displayName = document.getElementById("displayName");
+var email = document.getElementById("userEmail");
+var password = document.getElementById("userPassword");
+var confirmPassword = document.getElementById("passwordConfirmation");
+var registerButton = document.getElementById("regBTN");
+
+// Get Error Elements
+var fName_error = document.getElementById("fName-error");
+var lName_error = document.getElementById("lName-error");
+var displayName_error = document.getElementById("displayName-error");
+var password_error = document.getElementById("userPassword-error");
+var passwordConfirmation_error = document.getElementById("passwordConfirmation");
+
+// Listen for Inputs
+fName.addEventListener("blur", fNameVerify, true);
+lName.addEventListener("blur", lNameVerify, true);
+displayName.addEventListener("blur", displayNameVerify, true);
+password.addEventListener("blur", userPasswordVerify, true);
+
+function Validate(){
+    //First Name
+    if(fName.value == ""){
+        fName.style.border = "1px solid red";
+        fName_error.textContent = "Please Enter Your First Name."
+        fName.focus();
+        return false;
+    }
+    //Last Name
+    if(lName.value == ""){
+        lName.style.border = "1px solid red";
+        lName_error.textContent = "Please Enter Your Last Name."
+        lName.focus();
+        return false;
+    }
+    //Display Name
+    if(displayName.value == ""){
+        displayName.style.border = "1px solid red";
+        displayName_error.textContent = "Please Enter A Display Name."
+        displayName.focus();
+        return false;
+    }
+    //Password
+    if(password.value == ""){
+        password.style.border = "1px solid red";
+        password_error.textContent = "Please Enter A Password Name."
+        password.focus();
+        return false;
+    }
+    //Confirm Password
+    if(password.value != passwordConfirm.value){
+        password.style.border = "1px solid red";
+        password_error.textContent = "The Two Passwords Do Not Match!"
+        password.focus();
+        return false;
+    }
+}
+//Handle Events
+function fNameVerify(){
+    if(fName.value !=""){
+        fName.style.border = "1px solid green";
+        fName_error.innerHTML = "";
+        return true;
+    }
+}
+function lNameVerify(){
+    if(lName.value !=""){
+        lName.style.border = "1px solid green";
+        lName_error.innerHTML = "";
+        return true;
+    }
+}
+function displayNameVerify(){
+    if(displayName.value !=""){
+        fName.style.border = "1px solid green";
+        displayName_error.innerHTML = "";
+        return true;
+    }
+}
+function userPasswordVerify(){
+    if(userPassword !=""){
+        userPassword.style.border = "1px solid green";
+        userPassword_error.innerHTML = "";
+        return true;
+    }
+}
+function userPasswordVerify(){
+    if(userPassword !=""){
+        userPassword.style.border = "1px solid green";
+        userPassword_error.innerHTML = "";
+        return true;
+    }
+}

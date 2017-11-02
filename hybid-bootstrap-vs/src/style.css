@@ -68,6 +68,10 @@
 .colorSnow {
 	color: snow;
 }
+.error-message {
+	color: red;
+	font-weight: bold;
+}
 /* Ticket For Tournament */
 
 /*  Terms Of Service CSS */
