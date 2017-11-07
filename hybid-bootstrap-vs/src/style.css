@@ -75,3 +75,8 @@
 /* Ticket For Tournament */
 
 /*  Terms Of Service CSS */
+
+/* Hide Underline of A elements */
+a :hover {
+	text-decoration: none;
+}

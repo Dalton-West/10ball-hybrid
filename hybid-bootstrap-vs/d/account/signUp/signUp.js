@@ -86,9 +86,57 @@ googleBtn.addEventListener("click", signUpGoogle);
 			userDisplayName: displayName.value,
 			dateFirstSeen: Date()
 		};
-		console.log(userData);
-		alert("The form was submitted successfully!");
+		fBaseCreateUser();
+		updateDataBase();
 		
+}
+//firebase create user with email and password
+function fBaseCreateUser(){
+	var email = userEmail.value;
+	var password = userPassword.value;
+	firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+		//check if user is signed in or not
+		var user = firbase.auth().currentUser;
+		var name, email, photoUrl, uid, emailVerified;
+		/* firebase.auth().onAuthStateChanged(function(user){
+			if(user != null){
+				//User Is signed in
+				name = user.displayName;
+				email = user.email;
+				photoUrl = user.photoUrl;
+				emailVerified = user.emailVerified;
+				uid = user.uid;
+			} else {
+				//No user is signed in
+			}
+		}) */
+		//Update the users profile
+		user.updateProfile({
+			displayName: userData.displayName,
+			photoURL: null,
+
+		}).then(function(){
+			//Update Successful
+			console.log("The users display name has been set with firebase.");
+		}).catch(function(){
+			//an error occured
+			console.log("There was a error seting the users displayName");
+		})
+	}).then(function(){
+		//Send a verification email
+		user.sendEmailVerification().then(function(){
+			//Email Sent
+			console.log("Verifcation email was sent!");
+		}).catch(function(){
+			//An error happened
+			console.log("There was an error sending the user the verifcation email.")
+		})
+	})
+}
+
+//firestore data put
+function firestoreUserData() {
+	
 }
 
 //Form Validation Functions Clear errors if events are true
