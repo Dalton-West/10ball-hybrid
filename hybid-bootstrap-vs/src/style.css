@@ -80,3 +80,12 @@
 a :hover {
 	text-decoration: none;
 }
+
+/* User Dashboard Navigation*/ 
+.userLeftPannel {
+    color: snow;
+    text-decoration: none;
+}
+.snowBottomBorder{
+	border-bottom: 2px solid snow;
+}

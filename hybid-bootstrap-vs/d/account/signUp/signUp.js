@@ -29,6 +29,15 @@ regBtn.addEventListener("click", signUpEmail);
 fbRegBtn.addEventListener("click", signUpFacebook);
 googleBtn.addEventListener("click", signUpGoogle);
 
+
+//Firebase Auth Variable
+var auth = firebase.auth();
+//Current User
+//Firestore Variable db
+var db = firebase.firestore();
+//Firestore References
+var addUser = db.collection("users");
+
 //SignUp users with email
 	function signUpEmail(){
 		//Prevent form from refreshing on submit
@@ -78,66 +87,30 @@ googleBtn.addEventListener("click", signUpGoogle);
 		}*/
 		
 		//Done Error Checking
-		//Create a variable objet from all the form data
+		//Create a user account
+		var email = userEmail.value;
+		var password = userPassword.value;
+		//create user
+		 auth.createUserWithEmailAndPassword(email, password);
+		 
+		 /*.then(function(){
+			//Add The data to a database 
+			addUser.doc().set(userData).then(function() {
+				console.log("Document successfully written!");
+			});
+	});*/
+	// Declarte Data for database
 		var userData = {
 			firstName: fName.value,
 			lastName: lName.value,
-			emailAddress: userEmail.value,
-			userDisplayName: displayName.value,
-			dateFirstSeen: Date()
+			displayName: displayName.value,
+			email: userEmail.value,
+			userCreated: Date(),
+			timestamp: firebase.firestore.FieldValue.serverTimestamp()
 		};
-		fBaseCreateUser();
-		updateDataBase();
-		
-}
-//firebase create user with email and password
-function fBaseCreateUser(){
-	var email = userEmail.value;
-	var password = userPassword.value;
-	firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-		//check if user is signed in or not
-		var user = firbase.auth().currentUser;
-		var name, email, photoUrl, uid, emailVerified;
-		/* firebase.auth().onAuthStateChanged(function(user){
-			if(user != null){
-				//User Is signed in
-				name = user.displayName;
-				email = user.email;
-				photoUrl = user.photoUrl;
-				emailVerified = user.emailVerified;
-				uid = user.uid;
-			} else {
-				//No user is signed in
-			}
-		}) */
-		//Update the users profile
-		user.updateProfile({
-			displayName: userData.displayName,
-			photoURL: null,
-
-		}).then(function(){
-			//Update Successful
-			console.log("The users display name has been set with firebase.");
-		}).catch(function(){
-			//an error occured
-			console.log("There was a error seting the users displayName");
-		})
-	}).then(function(){
-		//Send a verification email
-		user.sendEmailVerification().then(function(){
-			//Email Sent
-			console.log("Verifcation email was sent!");
-		}).catch(function(){
-			//An error happened
-			console.log("There was an error sending the user the verifcation email.")
-		})
-	})
-}
-
-//firestore data put
-function firestoreUserData() {
-	
-}
+		console.log(userData);
+		console.log("The dataObject firstName is " + userData.firstName);
+	}
 
 //Form Validation Functions Clear errors if events are true
 //firstName
@@ -157,7 +130,7 @@ function lNameVerify(){
 	}
 }
 function displayNameVerify(){
-	if(displayName.value > 4){
+	if(displayName.value >= 4 || displayName != ""){
 		displayName.style.border = "1px solid green";
 		setError("displayName", "");
 		return true;

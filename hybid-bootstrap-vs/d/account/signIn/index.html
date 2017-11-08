@@ -17,8 +17,6 @@
     <script src="../../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../../src/css/font-awesome.css">
-    <script src="../../../src/js/app_config.js"></script>
-    <script src="signIn.js"></script>
 </head>
 <body>
     <section id="header">
@@ -84,21 +82,21 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
                     <!-- Content Box -->
-					<form role="form" id="loginForm" method="post" onsubmit="return logIn()">
+					<form role="form" id="loginForm" method="post" onsubmit="return false">
                     <h2>Welcome Back<small> Please Login or <a href="../signUp/index.html">Sign up</a></small></h2>
                     <div class="form-group">
-                        <input type="email" name="loginEmal" id="loginEmail" class="form-control input-lg" placeholder="Email Address" required="">
+                        <input type="email" name="loginEmail" id="loginEmail" class="form-control input-lg" placeholder="Email Address" required="">
                     </div>
                     <div class="form-group">
                         <input type="password" name="loginPassword" id="loginPassword" class="form-control input-lg" placeholder="Password" required="">
-                    </div><span class="help-block d-none">Password error</span> <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="logIn()">Login</button>
+                    </div><span class="help-block d-none">Password error</span> <button class="btn btn-lg btn-primary btn-block" type="submit" id="logInBtn">Login</button>
                 </form>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<label class="checkbox"><input type="checkbox" value="remember-me">Remember Me</label>
 				</div>
 				<div class="col-xs-12 col-sm-6">
-					<p class="_forgotPwd"><a href="forgot_Password.html"><span class="btn btn-outline-danger btn-block btn-sm">Forgot password?</span></a></p>
+					<p class="_forgotPwd" id="_forgotPwd"><span class="btn btn-outline-danger btn-block btn-sm">Forgot password?</span></p>
 				</div>
 			</div>
 			<div class="orSplit">
@@ -110,10 +108,10 @@
 			</div>
 			<div class="row btn-social-media">
 				<div class="col-xs-6 col-sm-6">
-					<button class="btn btn-lg btn-block btn-facebook" onclick="loginWithFacebook()"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
+					<button class="btn btn-lg btn-block btn-facebook" id="logInFacebook"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
 				</div>
 				<div class="col-xs-6 col-sm-6">
-					<button class="btn btn-lg btn-block btn-google" onclick="loginWithGoogle()"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
+					<button class="btn btn-lg btn-block btn-google" id="logInGoogle"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
 				</div>
 			</div>
                 </div>
@@ -167,5 +165,13 @@
             </footer>
         </div>
     </section>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
+    <script src="../../../src/js/app_config.js"></script>
+    <script src="signIn.js"></script>
 </body>
 </html>

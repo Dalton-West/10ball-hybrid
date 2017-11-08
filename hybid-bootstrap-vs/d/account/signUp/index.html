@@ -83,110 +83,113 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
                     <!-- Content Box -->
-                    <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
-                    <h2>Please Sign Up <small>Welcome to The Ghost Tour</small></h2>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                                <div id="fName-error" class="error-message"></div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
-                                <div id="lName-error" class="error-message"></div>
-                            </div>
-                        </div>
+                    <div id="registerContent">
+                            <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
+                                    <h2>Please Sign Up <small>Welcome to The Ghost Tour</small></h2>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                <div id="fName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                <div id="lName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+                                        <div id="displayName-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                                        <div id="userEmail-error" class="error-message"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
+                                                <div id="userPassword-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                                                <div id="userPassword-error" class="error-message"></div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                <div class="row">
+                                        <div class="col-12">
+                                            By clicking <strong>Register</strong>, you are agreeing to the <a href="#" data-toggle="modal" data-target="#termsAndConditions">Terms and Conditions</a> set out by this site, including our Cookie Use.<br>
+                                        </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" id="regBTN"></div>
+                                        <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div>
+                                    </div>
+                                    <div class="row" hidden>
+                                        <div class="col-12">
+                                            <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
+                                        </div>
+                                    </div>
+                                </form>
+                                    <div class="orSplit">
+                                        <span class="orSplitContent">Or Sign Up With</span>
+                                    </div>
+                                    <!-- Social Buttons -->
+                                    <div class="row">
+                                    <br>
+                                    </div>
+                                    <div class="row btn-social-media">
+                                        <div class="col-xs-6 col-sm-6">
+                                            <button class="btn btn-lg btn-block btn-facebook" onclick="signupWithFacebook()"><i class="fa fa-facebook visible-xs" id="fbBtn"></i> <span class="hidden-sm-down">Facebook</span></button>
+                                        </div>
+                                    <div class="col-xs-6 col-sm-6">
+                                        <button class="btn btn-lg btn-block btn-google" onclick="signupWithGoogle()"><i class="fa fa-google-plus visible-xs" id="googleBtn"></i> <span class="hidden-sm-down">Google</span></button>
+                                    </div>
+                                        <br>
+                                    </div>
+                                    <!--  Terms and Conditions -->
+                                        <div aria-hidden="true" aria-labelledby="terms" class="modal fade" id="termsAndConditions" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="terms"></h5>
+                                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">Close [x]</button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Terms go here -->
+                                    <h3>Terms And Conditions</h3><span class="badge badge-info">Last Modified On: October 27, 2017</span>
+                                    <div><p>
+                                        These Website Standard Terms and Conditions (these “Terms” or these “Website Standard Terms and Conditions”) 
+                                        contained here on this webpage, shall govern your use of this website.<br>
+                                        <b>By accessing and using this service, you accept and agree to be bound by the terms and provision of this agreement.
+                                            In addition, when using our sites services, you shall be subject to any posted guidelines or rules applicable to such services.
+                                            Any participation in this service will constitute acceptance of this agreement.
+                                            If you do not agree to abide by the above, please do not use this service
+                                        </b>
+                                        </p>
+                                    </div>
+                                    <h3>Intellectual Property Rights</h3>
+                                    <div>
+                                        <p>By submitting any video or other media to 10ball.org. It hereby becomes intellectual property of 10ball.org and its licensors.
+                                            <br>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">I Have Read the above Terms And Conditions</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
-                        <div id="displayName-error" class="error-message"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-                        <div id="userEmail-error" class="error-message"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
-								<div id="userPassword-error" class="error-message"></div>
-                            </div>
-                        </div>
-                        <!--<div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-                                <div id="userPassword-error" class="error-message"></div>
-                            </div>
-                        </div>-->
-                    </div>
-                <div class="row">
-                        <div class="col-12">
-                            By clicking <strong>Register</strong>, you are agreeing to the <a href="#" data-toggle="modal" data-target="#termsAndConditions">Terms and Conditions</a> set out by this site, including our Cookie Use.<br>
-                        </div>
-                </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" id="regBTN"></div>
-                        <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div>
-                    </div>
-                    <div class="row" hidden>
-                        <div class="col-12">
-                            <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
-                        </div>
-                    </div>
-                </form>
-					<div class="orSplit">
-						<span class="orSplitContent">Or Sign Up With</span>
-					</div>
-					<!-- Social Buttons -->
-					<div class="row">
-					<br>
-					</div>
-					<div class="row btn-social-media">
-						<div class="col-xs-6 col-sm-6">
-							<button class="btn btn-lg btn-block btn-facebook" onclick="signupWithFacebook()"><i class="fa fa-facebook visible-xs" id="fbBtn"></i> <span class="hidden-sm-down">Facebook</span></button>
-						</div>
-					<div class="col-xs-6 col-sm-6">
-						<button class="btn btn-lg btn-block btn-google" onclick="signupWithGoogle()"><i class="fa fa-google-plus visible-xs" id="googleBtn"></i> <span class="hidden-sm-down">Google</span></button>
-					</div>
-						<br>
-					</div>
-					<!--  Terms and Conditions -->
-						<div aria-hidden="true" aria-labelledby="terms" class="modal fade" id="termsAndConditions" role="dialog" tabindex="-1">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="terms"></h5>
-					<button aria-hidden="true" class="close" data-dismiss="modal" type="button">Close [x]</button>
-				</div>
-				<div class="modal-body">
-					<!-- Terms go here -->
-					<h3>Terms And Conditions</h3><span class="badge badge-info">Last Modified On: October 27, 2017</span>
-					<div><p>
-						These Website Standard Terms and Conditions (these “Terms” or these “Website Standard Terms and Conditions”) 
-						contained here on this webpage, shall govern your use of this website.<br>
-						<b>By accessing and using this service, you accept and agree to be bound by the terms and provision of this agreement.
-							In addition, when using our sites services, you shall be subject to any posted guidelines or rules applicable to such services.
-							Any participation in this service will constitute acceptance of this agreement.
-							If you do not agree to abide by the above, please do not use this service
-						</b>
-						</p>
-					</div>
-					<h3>Intellectual Property Rights</h3>
-					<div>
-						<p>By submitting any video or other media to 10ball.org. It hereby becomes intellectual property of 10ball.org and its licensors.
-							<br>
-							
-						</p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button class="btn btn-primary" data-dismiss="modal" type="button">I Have Read the above Terms And Conditions</button>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+                    
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
                     <!-- Right Box Pannel -->
@@ -239,8 +242,12 @@
         </div>
     </section>
         <!-- Configure Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
     <script src="../../../src/js/app_config.js"></script>
     <script src="signUp.js"></script>
 </body>
