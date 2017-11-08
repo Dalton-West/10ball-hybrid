@@ -3,11 +3,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>10ball.org | Account</title>
+    <title>10ball.org | User Account</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,shrink-to-fit=no">
-    <meta name="Description" content="Modify your account! ">
+    <meta name="Description" content="Sign In to participate in The Ghost Tour. ">
     <meta name="Keywords" content="Online Pool Tournament, online pool tournament, The Ghost Tour, the ghost tour, Virtual Pool Tournament, virtual pool tournament, Pool Tournament, pool tournament, Chris Woodrum, chris woodrum">
     <link rel="stylesheet" href="../../../src/style.css" />
     <!-- Import Bootstrap-->
@@ -60,8 +60,8 @@
                         <a class="nav-item nav-link" href="../../about/index.html">About Us</a>
                     </div>
                     <div class="nav navbar-nav ml-auto">
-                        <a class="nav-item nav-link d-none" href="../signIn/index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In</a>
-                        <a class="nav-item nav-link" href="#" id="logOut"><span class="fa fa-sign-out"></span> Log Out</a>
+                        <a class="nav-item nav-link active" href="index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link d-none" href="#" id="logOut"><span class="fa fa-sign-out"></span> Log Out</a>
                     </div>
                 </div>
             </nav>
@@ -81,21 +81,20 @@
 					
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
-                    <!-- Content Box -->
                     <div class="row">
-                        <div class="col-lg-3 userLeftPannel" style="background-color: #3B3F42">
+                        <div id="userDashboard" class="col-lg-3 userLeftPannel fill-page" style="background-color: #3B3F42">
                             <div class="row snowBottomBorder">
-                            <div style="padding: 15px; margin: 0px;" class="text-center"><img src="https://cdn3.iconfinder.com/data/icons/rcons-user-action/32/boy-512.png" class="img-fluid rounded-circle" style="" alt="User Avatar" height="250px">
+                            <div style="padding: 15px; margin: 0px;" class="text-center"><img src="../../../img/boy-512.png" class="img-fluid rounded-circle" alt="User Avatar" height="250px">
                                 <p style="padding-top: 15px"> Welcome<br> <span id="userDisplayName" class="text-capitalize font-weight-bold"> &nbsp;_userName_&nbsp; </span></p>
                                 </div>
                             </div>
-                            <div class="row" style="minheight: 45%vh;">
+                            <div class="row">
                                 <nav class="nav flex-column nav-fill">
                                   <h1 class="navbar-brand mb-0 text-center">Dashboard</h1>
                                   <a class="nav-link" href="#" style="color: snow;"><i class="fa fa-gear">&nbsp;</i>Profile</a>
+									<a class="nav-link" href="#" style="color: snow;"><i class="fa fa-home">&nbsp;</i>Mailing and Billing Address</a>
                                   <a class="nav-link" href="#" style="color: snow;"><i class="fa fa-ticket">&nbsp;</i>Tickets Bought</a>
-                                  <a class="nav-link" href="#" style="color: snow;"><i class="fa fa-plus">&nbsp;</i>Become a Pro Member</a>
-                                  <a class="nav-link" href="#" style="color: snow;"><i class="fa fa-wheelchair">&nbsp;</i>Player Handicap</a>
+                                  <a class="nav-link" href="#" style="color: snow;"><i class="fa fa-wheelchair-alt">&nbsp;</i>Player Handicap</a>
                                   <p class="nav-link"></p>
                                 </nav>
                             </div>
@@ -104,11 +103,165 @@
                             <div id="userProfile">
                                 <h3 class="text-center">Your Profile</h3>
                                 <p>Welcome to the user profile please make sure your profile is complete so you can play in our tournaments!</p>
-                                
-                             </div>
-                        </div>
-                    </div>
+								<p>Please fill out your profile <b>100%</b>. <br><b><i>Incomplete profiles <u>will not</u> recieve a check if they win the tournament!</i></b></p>
+								<h5><u>User Information</u></h5>
+                                <p><b>First Name:</b> <span id="userFirstNameData"> &nbsp; _firstName &nbsp;</span></p>
+								<p><b>Last Name:</b> <span id="userLastNameData"> &nbsp; _lastName &nbsp;</span></p>
+								<p><b>Display Name:</b> <span id="userDisplayNameData"> &nbsp; _displayName &nbsp;</span></p>
+								<p><b>Email Address:</b> <span id="useremailAddressData"> &nbsp; _emailAddress &nbsp;</span></p>
+								<button class="btn btn-success btn-sm float-right" id="updateProfileBtn">Update Profile</button><br>
+                           </div>
+							<div id="updateProfile">
+                                    <h5 class="text-center">Update My Profile</h5>
+								 <div><p>To update your legal first or last name please fill out the <a href=""> Update Legal Name</a> form!<br></p></div>
+								 <div class="form-group">
+										<label>Upload an Avatar</label>
+                                        <input type="file" name="userAvatar" id="userAvatar" class="form-control-file" tabindex="1" aria-describedby="fileHelp">
+									 <small id="fileHelp" class="form-text text-muted">This is your user avatar. Please limit the size to 1mb or less.</small>
+                                        <div id="userAvatar-error" class="error-message"></div>
+										<button class="btn btn-sm btn-success float-right" id="uploadAvatar">Upload Avatar</button>
+                                    </div>
+                                    <div class="form-group">
+										<label>Update Your Display Name</label>
+                                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="1">
+                                        <div id="displayName-error" class="error-message"></div>
+										<button class="btn btn-sm btn-success float-right" id="updateDisplayNameBtn">Update Display Name</button>
+                                    </div>
+								 <div class="form-group">
+										<label>Update Your Email Address</label>
+                                        <input type="text" name="updateEmailAddress" id="updateEmailAddress" class="form-control input-lg" placeholder="Email Address" tabindex="1">
+                                        <div id="updateEmail-error" class="error-message"></div>
+										<button class="btn btn-sm btn-success float-right" id="updateEmailAddressBtn">Update Email Address</button>
+                                    </div>
+								 <div class="form-group">
+								   <label>Change Your Password</label>
+                                        <input type="password" name="updatePassword" id="updatePassword" class="form-control input-lg" placeholder="New Password" tabindex="1">
+                                        <div id="updatePassword-error" class="error-message"></div>
+								   <button class="btn btn-sm btn-success float-right" id="updatePasswordBtn">Change My Password</button>
+									 <br>
+                               </div>
+								 <div class="form-group">
+								 <label>Disable My Account</label>
+									 <button class="btn btn-md btn-warning btn-block" id="disbleMyAccountBtn" aria-describedby="disableAccounthelp">Disable My Account</button>
+									 <small id="disableAccounthelp" class="form-text text-muted">By clicking this link you will be signed out and your account will be locked. You will be unable to sign back in unless you send us a recovery email asking us to re-enable your account!</small>
+								 </div>
+								 <div class="form-group">
+								 <label>Delete My Account</label>
+									 <button class="btn btn-md btn-danger btn-block" id="deleteMyAccountBtn" aria-describedby="deleteAccounthelp">Delete My Account</button>
+									 <small id="deleteAccounthelp" class="form-text text-muted">This will open a form that you will need to submit to us! Based upon our judgement we may or may not require more information to delete your account!</small>
+								 </div>
+                                </div>
+							<div id="mailingAndBillingAddress">
+								 <h5 class="text-center">Mailing and Billing Address</h5>
+								 <p>It is very <b>IMPORTANT</b> that this section is filled out. If this section is not filled out then <b><u>YOU WILL NOT RECIEVE A CHECK IF YOU WIN</u></b>!</p>
+								 <form role="form">
+								 <h5>Mailing Address<br><small>If you win this is where we will send the check</small></h5>
+									 <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                <div id="fName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                <div id="lName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="addressLine1" id="addressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
+                                        <div id="addressLine1-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="addressLine2" id="addressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
+                                        <div id="addressLine2-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="stateRegion" id="stateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
+                                        <div id="stateRegion-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="zipPostalCode" id="zipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
+                                        <div id="zipPostalCode-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                        <div id="country-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="tel" name="mailingTel" id="mailingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                        <div id="mailingTel-error" class="error-message"></div>
+                                    </div>
+								<h5>Billing Address</h5>
+									 <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="billingFirstName" id="billingFirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                <div id="billingFName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="billinLastName" id="billingLastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                <div id="billingLName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="billingAddressLine1" id="billingAddressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
+                                        <div id="billingAddressLine1-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="billingAddressLine2" id="billingAddressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
+                                        <div id="billingAddressLine2-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="billingStateRegion" id="billingStateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
+                                        <div id="billingStateRegion-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="billingZipPostalCode" id="billingZipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
+                                        <div id="billingZipPostalCode-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="text" name="billingCountry" id="billingCountry" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                        <div id="billingCountry-error" class="error-message"></div>
+                                    </div>
+									 <div class="form-group">
+                                        <input type="tel" name="billingTel" id="billingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                        <div id="billingTel-error" class="error-message"></div>
+                                    </div>
+									 <button type="submit" class="btn btn-primary btn-sm float-right">Update Mailing Address</button>
+									 <br>
+								 </form>
+							 </div>
+							 <div id="purchasedTickets">
+							 	<h5>Tickets Purchased</h5>
+								 <table class="table table-bordered table-hover">
+   								<thead class="thead-inverse">
+   									<tr>
+										<th>Number Of Players</th>
+										<th>Number of Possible Winners</th>
+										<th>Placement in Tournament</th>
+										<th>Payout Percentages</th>
+    								</tr>
+  								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1-50 Players</th>
+										<td>1 Possible Winner</td>
+										<td>1st Place</td>
+										<td>100% Payout</td>
+									</tr>
+								</tbody>
+								 </table>
 
+							 </div>
+                         </div>
+						</div>
+							
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
                     <!-- Right Box Pannel -->
@@ -160,5 +313,13 @@
             </footer>
         </div>
     </section>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
+    <script src="../../../src/js/app_config.js"></script>
+    <script src="signIn.js"></script>
 </body>
 </html>

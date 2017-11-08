@@ -108,6 +108,7 @@ var addUser = db.collection("users");
 			userCreated: Date(),
 			timestamp: firebase.firestore.FieldValue.serverTimestamp()
 		};
+		//Push to database firestore
 		console.log(userData);
 		console.log("The dataObject firstName is " + userData.firstName);
 	}
