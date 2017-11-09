@@ -42,6 +42,31 @@ var addUser = db.collection("users");
 	function signUpEmail(){
 		//Prevent form from refreshing on submit
 		//regForm.addEventListener("submit", function(event){event.preventDefault();});
+		formValidationErrors();
+		 
+		 /*.then(function(){
+			//Add The data to a database 
+			addUser.doc().set(userData).then(function() {
+				console.log("Document successfully written!");
+			});
+	});*/
+	// Check to see if user is not null
+	checkUserNotNull();
+	// Declarte Data for database
+		var userData = {
+			firstName: fName.value,
+			lastName: lName.value,
+			displayName: displayName.value,
+			email: userEmail.value,
+			userCreated: Date(),
+			timestamp: firebase.firestore.FieldValue.serverTimestamp()
+		};
+		//Push to database firestore
+		console.log(userData);
+		console.log("The dataObject firstName is " + userData.firstName);
+	}
+
+	function formValidationErrors(){
 		// Error Check Form
 		if(fName.value === ""){
 			fName.style.border = "1px solid red";
@@ -87,32 +112,31 @@ var addUser = db.collection("users");
 		}*/
 		
 		//Done Error Checking
+	}
+	function firebaseCreateUser(){
 		//Create a user account
 		var email = userEmail.value;
 		var password = userPassword.value;
 		//create user
 		 auth.createUserWithEmailAndPassword(email, password);
-		 
-		 /*.then(function(){
-			//Add The data to a database 
-			addUser.doc().set(userData).then(function() {
-				console.log("Document successfully written!");
-			});
-	});*/
-	// Declarte Data for database
-		var userData = {
-			firstName: fName.value,
-			lastName: lName.value,
-			displayName: displayName.value,
-			email: userEmail.value,
-			userCreated: Date(),
-			timestamp: firebase.firestore.FieldValue.serverTimestamp()
-		};
-		//Push to database firestore
-		console.log(userData);
-		console.log("The dataObject firstName is " + userData.firstName);
 	}
-
+	function checkUserNotNull(){
+		var user = firebase.auth().currentUser;
+		var name, email, photoUrl, uid, emailVerified;
+		
+		if (user != null) {
+		  // User is signed in.
+		  name = user.displayName;
+		  email = user.email;
+		  photoUrl = user.photoURL;
+		  emailVerified = user.emailVerified;
+		  uid = user.uid;
+		  console.log(user, "/b User Info");
+		} else {
+		  // No user is signed in.
+		  console.log(user, "/b No User");
+		}
+	}
 //Form Validation Functions Clear errors if events are true
 //firstName
 function fNameVerify(){

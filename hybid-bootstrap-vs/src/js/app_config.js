@@ -29,14 +29,14 @@ var regContent = document.getElementById("registerContent");
 firebase.auth().onAuthStateChanged(function(user){
 	if (user) {
 	  // User is signed in.
-	  console.log("A user is signed in See Below");
-	  console.log(user);
+	  //console.log("A user is signed in See Below");
+	  //console.log(user);
     logOutBtn.classList.remove("d-none");
     logInBtn.classList.add("d-none");
-    regContent.classList.add("d-none");
+
 	} else {
 	  // No user is signed in.
-	  console.log("A user is not signed in!");
+	  //console.log("A user is not signed in!");
     logOutBtn.classList.add("d-none");
     logInBtn.classList.remove("d-none");
 	}
@@ -47,5 +47,5 @@ firebase.auth().onAuthStateChanged(function(user){
 //Sign Out Users
 function logOut(){
   auth.signOut();
-  console.log("Logged Out")
+  //console.log("Logged Out")
 }
