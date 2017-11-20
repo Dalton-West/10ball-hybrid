@@ -46,6 +46,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     logOutBtn.classList.remove("d-none");
     logInBtn.classList.add("d-none");
     // [END_EXCLUDE]
+    return user;
   } else {
     // User is signed out.
     // [START_EXCLUDE]

@@ -22,6 +22,32 @@ document.addEventListener('DOMContentLoaded', function() {
   updateProfileSec.classList.add("d-none");
   mailingAndBillingSec.classList.add("d-none");
   tournamentHistorySec.classList.add("d-none");
+// Where Data Needs to be shown!
+  //Nav
+var nameLeftNav = document.querySelector("#userDisplayName");
+var userProfileImage = document.querySelector("profilePicture");
+//Content :: User Information
+var contentUserFirstName = document.querySelector("#userFirstNameData");
+var contentUserLastName = document.querySelector("#userLastNameData");
+var contentUserDisplayName = document.querySelector("#userDisplayNameData");
+var contentUserEmail = document.querySelector("#useremailAddressData");
+//User Profile
+var user = auth.currentUser;
+var name, email, photoUrl, uid, emailVerified;
+if (user) {
+  name = user.displayName;
+  email = user.email;
+  photoUrl = user.photoURL;
+  emailVerified = user.emailVerified;
+  uid = user.uid;
+//Set Data
+  contentUserFirstName.innerHTML = "User First Name To be pulled from data base";
+  contentUserLastName.innerHTML = "User Last Name To be pulled from data base";
+  contentUserDisplayName.innerHTML = "User Display Name To be pulled from data base";
+  contentUserEmail.innerHTML = email;
+  console.log(email);
+  //End User
+}
 }, false);
 //Nav Clicks
 //Pofile
