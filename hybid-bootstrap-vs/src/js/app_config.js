@@ -55,7 +55,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // [END_EXCLUDE]
   }
   // [START_EXCLUDE]
-  document.getElementById('quickstart-sign-in').disabled = false;
+  //document.getElementById('quickstart-sign-in').disabled = false;
   // [END_EXCLUDE]
 });
 /* firebase.auth().onAuthStateChanged(function(user){
