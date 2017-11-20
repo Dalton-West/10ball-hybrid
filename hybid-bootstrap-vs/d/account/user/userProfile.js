@@ -96,6 +96,8 @@ function userProfileSectionData(){
         }
       });
 }
+
+//Update Profile Section
 function updateProfile(){
   
 }
