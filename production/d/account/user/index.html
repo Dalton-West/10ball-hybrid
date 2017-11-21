@@ -60,7 +60,8 @@
                         <a class="nav-item nav-link" href="../../about/index.html">About Us</a>
                     </div>
                     <div class="nav navbar-nav ml-auto">
-                        <a class="nav-item nav-link active" href="index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link active" href="index.html" id="userProfile"><span class="fa fa-user-circle"></span> User Profile<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link active" href="../signIn/index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In</a>
                         <a class="nav-item nav-link d-none" href="#" id="logOut"><span class="fa fa-sign-out"></span> Log Out</a>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
                     <div class="row">
                         <div id="userDashboard" class="col-lg-3 userLeftPannel fill-page" style="background-color: #3B3F42">
                             <div class="row snowBottomBorder">
-                            <div style="padding: 15px; margin: 0px;" class="text-center"><img src="../../../img/boy-512.png" class="img-fluid rounded-circle" alt="User Avatar" height="250px">
+                            <div style="padding: 15px; margin: 0px;" class="text-center"><img src="../../../img/boy-512.png" class="img-fluid rounded-circle" alt="User Avatar" height="250px" id="profilePicture">
                                 <p style="padding-top: 15px"> Welcome<br> <span id="userDisplayName" class="text-capitalize font-weight-bold"> &nbsp;_userName_&nbsp; </span></p>
                                 </div>
                             </div>
@@ -100,7 +101,7 @@
                             </div>
                         </div>
                          <div class=" col-lg-9">
-                            <div id="userProfile">
+                            <div id="userProfileSection">
                                 <h3 class="text-center">Your Profile</h3>
                                 <p>Welcome to the user profile please make sure your profile is complete so you can play in our tournaments!</p>
 								<p>Please fill out your profile <b>100%</b>. <br><b><i>Incomplete profiles <u>will not</u> recieve a check if they win the tournament!</i></b></p>
@@ -113,13 +114,20 @@
                            </div>
 							<div id="updateProfile">
                                     <h5 class="text-center">Update My Profile</h5>
-								 <div><p>To update your legal first or last name please fill out the <a href=""> Update Legal Name</a> form!<br></p></div>
+								 <div><p>Each Field Must Be Filled In and submitted </p></div>
 								 <div class="form-group">
 										<label>Upload an Avatar</label>
                                         <input type="file" name="userAvatar" id="userAvatar" class="form-control-file" tabindex="1" aria-describedby="fileHelp">
 									 <small id="fileHelp" class="form-text text-muted">This is your user avatar. Please limit the size to 1mb or less.</small>
                                         <div id="userAvatar-error" class="error-message"></div>
 										<button class="btn btn-sm btn-success float-right" id="uploadAvatar">Upload Avatar</button>
+                                    </div>
+                                    <div class="form-group">
+										<label>Update Your First & Last Name</label>
+                                        <input type="text" name="updateFirstName" id="updateFirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                        <input type="text" name="updateLastName" id="updateLastName" class="form-control input-lg" placeholder="Last Name" tabindex="1">
+                                        <div id="updateName-error" class="error-message"></div>
+										<button class="btn btn-sm btn-success float-right" id="updateNamesBtn">Update Name</button>
                                     </div>
                                     <div class="form-group">
 										<label>Update Your Display Name</label>
@@ -140,6 +148,17 @@
 								   <button class="btn btn-sm btn-success float-right" id="updatePasswordBtn">Change My Password</button>
 									 <br>
                                </div>
+                               <div class="row btn-social-media">
+                                   <div class="col-12">
+                                        <label>To be able to login with another method please link your account!</label>
+                                   </div>
+                                    <div class="col-xs-6 col-sm-6">
+                                        <button class="btn btn-lg btn-block btn-facebook" id="linkFaceBook"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Link My Facebook</span></button>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6">
+                                        <button class="btn btn-lg btn-block btn-google" id="linkGoogle"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Link My Google</span></button>
+                                    </div>
+                                </div>
 								 <div class="form-group">
 								 <label>Disable My Account</label>
 									 <button class="btn btn-md btn-warning btn-block" id="disbleMyAccountBtn" aria-describedby="disableAccounthelp">Disable My Account</button>
@@ -258,7 +277,12 @@
 								</tbody>
 								 </table>
 
-							 </div>
+                             </div>
+                             <!-- Player Handicap -->
+                             <div id="playerHandicap">
+                                <h5>Tickets Purchased</h5>
+                                <p>Your current handicap is <span id="playerHandicapValue"></span></p>
+                            </div>
                          </div>
 						</div>
 							

@@ -10,10 +10,10 @@ var btnFB = document.getElementById("logInFacebook");
 var btnGoogle = document.getElementById("logInGoogle");
 
 // Onclick Events
-btnLogin.addEventListener("click", logInEmail);
-btnForgotPass.addEventListener("click", goToForgotPassword);
-btnFB.addEventListener("click", logInFacebook);
-btnGoogle.addEventListener("click", logInGoogle);
+btnLogin.addEventListener("click", logInEmail, false);
+btnForgotPass.addEventListener("click", goToForgotPassword, false);
+btnFB.addEventListener("click", logInFacebook, false);
+btnGoogle.addEventListener("click", logInGoogle, false);
 
 //Login Function
 function logInEmail(){
@@ -22,7 +22,6 @@ var passWord = password.value;
 var auth = firebase.auth();
 
 auth.signInWithEmailAndPassword(eMail, passWord).then(function (){
-	console.log()
 })
 
 }
@@ -37,12 +36,12 @@ function goToForgotPassword(){
 //Login Facebook Function
 function logInFacebook(){
 
-
+	console.log("This button for facebook was clicked!");
 	
 }
 //Login Google Function
 function logInGoogle(){
 
-
+	console.log("This button for google was clicked!");
 	
 }

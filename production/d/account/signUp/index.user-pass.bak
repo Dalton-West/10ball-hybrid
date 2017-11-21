@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -61,7 +61,6 @@
                         <a class="nav-item nav-link" href="../../about/index.html">About Us</a>
                     </div>
                     <div class="nav navbar-nav ml-auto">
-                        <a class="nav-item nav-link" href="../user/index.html" id="userProfile"><span class="fa fa-user-circle"></span> User Profile</a>
                         <a class="nav-item nav-link" href="../signIn/index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In</a>
                         <a class="nav-item nav-link d-none" href="#" id="logOut"><span class="fa fa-sign-out"></span> Log Out</a>
                     </div>
@@ -75,10 +74,10 @@
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-right: solid black 2px;">
                     <!-- Left Box Pannel -->
 					<div id="left_content_box">
-						<br>
-						<img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
-						<img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid"/>
-						<img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
+						<div class="row"> <img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
+							<img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid"/>
+							<img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
+						</div>
 					</div>
 					
                 </div>
@@ -87,46 +86,14 @@
                     <div id="registerContent">
                             <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
                                     <h2>Please Sign Up <small>Welcome to The Ghost Tour</small></h2>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                                                <div id="fName-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
-                                                <div id="lName-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
-                                        <div id="displayName-error" class="error-message"></div>
-                                    </div>
                                     <div class="form-group">
                                         <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4">
                                         <div id="userEmail-error" class="error-message"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
-                                        <div id="userPassword-error" class="error-message"></div>
-                                    </div>
-                                    <!--<div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
+                                <div class="form-group">
                                                 <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
                                                 <div id="userPassword-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-                                                <div id="userPassword-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                    </div>-->
+                                 </div>
                                 <div class="row">
                                         <div class="col-12">
                                             By clicking <strong>Register</strong>, you are agreeing to the <a href="#" data-toggle="modal" data-target="#termsAndConditions">Terms and Conditions</a> set out by this site, including our Cookie Use.<br>
@@ -141,7 +108,7 @@
                                             <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
                                         </div>
                                     </div>
-                                </form>
+                      </form>
                                     <div class="orSplit">
                                         <span class="orSplitContent">Or Sign Up With</span>
                                     </div>
@@ -151,10 +118,10 @@
                                     </div>
                                     <div class="row btn-social-media">
                                         <div class="col-xs-6 col-sm-6">
-                                            <button class="btn btn-lg btn-block btn-facebook"  id="fbBtn"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
+                                            <button class="btn btn-lg btn-block btn-facebook"><i class="fa fa-facebook visible-xs" id="fbBtn"></i> <span class="hidden-sm-down">Facebook</span></button>
                                         </div>
                                     <div class="col-xs-6 col-sm-6">
-                                        <button class="btn btn-lg btn-block btn-google" id="googleBtn"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
+                                        <button class="btn btn-lg btn-block btn-google"><i class="fa fa-google-plus visible-xs" id="googleBtn"></i> <span class="hidden-sm-down">Google</span></button>
                                     </div>
                                         <br>
                                     </div>
@@ -197,10 +164,10 @@
                     
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
-                   <!-- Right Box Pannel -->
+                    <!-- Right Box Pannel -->
 					<div id="advert_box_right">
-						<br>
-					<a href="http://www.muellers.com/" target="_blank">
+						<div class="row">
+						<a href="http://www.muellers.com/" target="_blank">
                         <img src="../../../img/right_side_adverts/Muellers-Logo-Md.png" alt="Advertier Muellers Logo" class="img-fluid" height="150">
                     </a>
                     <a href="https://cuestix.com/" target="_blank">
@@ -211,7 +178,7 @@
                     </a>
                     <a href="http://www.1stpawnllc.com" target="_blank">
                         <img src="../../../img/right_side_adverts/1stpawnlogo-gray_1_orig.jpg" alt="Advertiser First Pawn LLC" class="img-fluid" height="150"/>
-						</a>
+						</a></div>
 					</div>
                 </div>
             </div>

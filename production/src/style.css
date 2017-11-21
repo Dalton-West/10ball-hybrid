@@ -8,7 +8,7 @@
 #navigate {
     width: 100%;
 }
-#contnent {}
+#contnent {display: block;}
 .fill-page{
     min-height: 100vh;
 }

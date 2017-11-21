@@ -5,16 +5,22 @@ const googleSignUpBtn = document.getElementById("googleBtn");
 
 //Onclick Actions
 emailRegisterBtn.addEventListener("click", signUpWithEmail, false);
-emailRegisterBtn.addEventListener("click", function(){console.log("This is the anon array!");}, false);
+emailRegisterBtn.addEventListener("click", dataToDataBase, false);
 
 facebookSignUpBtn.addEventListener("click", signUpWithFacebook, false);
 
 googleSignUpBtn.addEventListener("click",signUpWithGoogle, false);
 
 
-//Check If the user is already signed in
-
-
+//Realtime authentication listener
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      dataToDataBase();
+    } else {
+      // No user is signed in.
+    }
+  });
 
 //Sign Up with email
 function signUpWithEmail(){
@@ -33,8 +39,42 @@ function signUpWithEmail(){
         userCreated: Date()
         //timestamp: db.FieldValue.serverTimestamp()
     };
-    console.log(_UserData);
-    return true;
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("user_data_key",  JSON.stringify(_UserData));
+         ;
+    } else {
+        document.getElementById("#content").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+    //console.log(_UserData);
+    auth.createUserWithEmailAndPassword(email, password);
+}
+
+//Get Data And Post To Database
+function dataToDataBase(){
+    // Retrieve
+    var storedData = localStorage.getItem("user_data_key");
+    if (storedData != "") {
+        var usersDataInput = JSON.parse(storedData);
+        console.log("The Data Entered into the form is" + usersDataInput);
+        return usersDataInput;
+    } else{
+        console.log("No data found");
+    }
+    updateProfile();
+}
+function updateProfile(){
+    var user = firebase.auth().currentUser;
+    user.updateProfile({
+      displayName: usersDataInput.displayName,
+      photoURL: ""
+    }).then(function() {
+      // Update successful.
+      console.log("Profile Updated");
+    }).catch(function(error) {
+      // An error happened.
+      console.log("Profile Update Failed");
+    });
 }
 //Sign Up with Facebook
 function signUpWithFacebook(){
@@ -46,4 +86,8 @@ function signUpWithFacebook(){
 function signUpWithGoogle(){
     console.log("Google Clicked");
     return true;
+}
+//setErrors For Signup form
+function setError(id, message){
+	document.getElementById(id + "-error").innerHTML = message;
 }

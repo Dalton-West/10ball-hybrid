@@ -5,7 +5,7 @@ var resetEmail = document.getElementById("resetEmail");
 var btnResetPassword = document.getElementById("resetBTN");
 
 //Onclick Send Reset
-btnResetPassword.addEventListener("click", sendResetEmail);
+btnResetPassword.addEventListener("click", sendResetEmail, false);
 
 function sendResetEmail(){
 	var emailAddress = resetEmail.value;
@@ -15,5 +15,6 @@ function sendResetEmail(){
 		console.log("reset email sent")
 	}).catch(function(error) {
 		// An error happened.
-	});
+		console.log("An error has occured " + error);
+;	});
 }
