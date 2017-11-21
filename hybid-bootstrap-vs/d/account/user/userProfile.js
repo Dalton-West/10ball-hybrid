@@ -125,6 +125,8 @@ if(uid == null){
 }
 });
 }
+
+//Update Profile Section
 function updateProfile(){
   
 }
