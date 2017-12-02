@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>10ball.org | Sign Up</title>
+    <title>10ball.org | : Step 2 Sign Up</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,shrink-to-fit=no">
@@ -86,8 +86,9 @@
                     <!-- Content Box -->
                     <div id="registerContent">
                             <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
-                                    <h2>Please Sign Up <small>Welcome to The Ghost Tour</small></h2>
-                                    <!-- <div class="row">
+                                    <h2>Please complete the signup process.</h2>
+                                    <p> If you do not fill this info out you will get errors later in our application</p>
+                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
@@ -104,95 +105,108 @@
                                     <div class="form-group">
                                         <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
                                         <div id="displayName-error" class="error-message"></div>
-                                    </div> -->
-                                    <div class="form-group">
-                                        <input type="email" name="userEmail" id="userEmail" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-                                        <div id="userEmail-error" class="error-message"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
-                                        <div id="userPassword-error" class="error-message"></div>
+                                    <div id="mailingAndBillingAddress">
+                                        <h5 class="text-center">Mailing and Billing Address</h5>
+                                        <p>It is very <b>IMPORTANT</b> that this section is filled out. If this section is not filled out then <b><u>YOU WILL NOT RECIEVE A CHECK IF YOU WIN</u></b>!</p>
+                                        <form role="form">
+                                        <h5>Mailing Address<br><small>If you win this is where we will send the check</small></h5>
+                                            <div class="row">
+                                               <div class="col-xs-12 col-sm-6 col-md-6">
+                                                   <div class="form-group">
+                                                       <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                       <div id="fName-error" class="error-message"></div>
+                                                   </div>
+                                               </div>
+                                               <div class="col-xs-12 col-sm-6 col-md-6">
+                                                   <div class="form-group">
+                                                       <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                       <div id="lName-error" class="error-message"></div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="addressLine1" id="addressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
+                                               <div id="addressLine1-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="addressLine2" id="addressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
+                                               <div id="addressLine2-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="stateRegion" id="stateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
+                                               <div id="stateRegion-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="zipPostalCode" id="zipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
+                                               <div id="zipPostalCode-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                               <div id="country-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="tel" name="mailingTel" id="mailingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                               <div id="mailingTel-error" class="error-message"></div>
+                                           </div>
+                                       <h5>Billing Address</h5>
+                                            <div class="row">
+                                               <div class="col-xs-12 col-sm-6 col-md-6">
+                                                   <div class="form-group">
+                                                       <input type="text" name="billingFirstName" id="billingFirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                       <div id="billingFName-error" class="error-message"></div>
+                                                   </div>
+                                               </div>
+                                               <div class="col-xs-12 col-sm-6 col-md-6">
+                                                   <div class="form-group">
+                                                       <input type="text" name="billinLastName" id="billingLastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                       <div id="billingLName-error" class="error-message"></div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="billingAddressLine1" id="billingAddressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
+                                               <div id="billingAddressLine1-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="billingAddressLine2" id="billingAddressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
+                                               <div id="billingAddressLine2-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="billingStateRegion" id="billingStateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
+                                               <div id="billingStateRegion-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="billingZipPostalCode" id="billingZipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
+                                               <div id="billingZipPostalCode-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="text" name="billingCountry" id="billingCountry" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                               <div id="billingCountry-error" class="error-message"></div>
+                                           </div>
+                                            <div class="form-group">
+                                               <input type="tel" name="billingTel" id="billingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                               <div id="billingTel-error" class="error-message"></div>
+                                           </div>
+                                            <button type="submit" class="btn btn-primary btn-sm float-right">Update Mailing Address</button>
+                                            <br>
+                                        </form>
                                     </div>
-                                    <!--<div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <input type="password" name="userPassword" id="userPassword" class="form-control input-lg" placeholder="Password" tabindex="5" >
-                                                <div id="userPassword-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-                                                <div id="userPassword-error" class="error-message"></div>
-                                            </div>
-                                        </div>
-                                    </div>-->
                                 <div class="row">
                                         <div class="col-12">
-                                            By clicking <strong>Register</strong>, you are agreeing to the <a href="#" data-toggle="modal" data-target="#termsAndConditions">Terms and Conditions</a> set out by this site, including our Cookie Use.<br>
+                                            Please click save before you continue! Thank You.
                                         </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-xs-12 col-md-9"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7" id="regBTN"></div>
-                                        <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div>
+                                        <div class="col-xs-12 col-md-9"><input type="submit" value="Save!" class="btn btn-success btn-block btn-lg" tabindex="7" id="saveData"></div>
+                                        <!-- <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div> -->
                                     </div>
-                                    <div class="row" hidden>
+                                    <div class="row" hidden id="successMsg">
                                         <div class="col-12">
                                             <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
                                         </div>
                                     </div>
                                 </form>
-                                    <div class="orSplit">
-                                        <span class="orSplitContent">Or Sign Up With</span>
-                                    </div>
-                                    <!-- Social Buttons -->
-                                    <div class="row">
-                                    <br>
-                                    </div>
-                                    <div class="row btn-social-media">
-                                        <div class="col-xs-6 col-sm-6">
-                                            <button class="btn btn-lg btn-block btn-facebook"  id="fbBtn"><i class="fa fa-facebook visible-xs"></i> <span class="hidden-sm-down">Facebook</span></button>
-                                        </div>
-                                    <div class="col-xs-6 col-sm-6">
-                                        <button class="btn btn-lg btn-block btn-google" id="googleBtn"><i class="fa fa-google-plus visible-xs"></i> <span class="hidden-sm-down">Google</span></button>
-                                    </div>
-                                        <br>
-                                    </div>
-                                    <!--  Terms and Conditions -->
-                                        <div aria-hidden="true" aria-labelledby="terms" class="modal fade" id="termsAndConditions" role="dialog" tabindex="-1">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="terms"></h5>
-                                    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">Close [x]</button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- Terms go here -->
-                                    <h3>Terms And Conditions</h3><span class="badge badge-info">Last Modified On: October 27, 2017</span>
-                                    <div><p>
-                                        These Website Standard Terms and Conditions (these “Terms” or these “Website Standard Terms and Conditions”) 
-                                        contained here on this webpage, shall govern your use of this website.<br>
-                                        <b>By accessing and using this service, you accept and agree to be bound by the terms and provision of this agreement.
-                                            In addition, when using our sites services, you shall be subject to any posted guidelines or rules applicable to such services.
-                                            Any participation in this service will constitute acceptance of this agreement.
-                                            If you do not agree to abide by the above, please do not use this service
-                                        </b>
-                                        </p>
-                                    </div>
-                                    <h3>Intellectual Property Rights</h3>
-                                    <div>
-                                        <p>By submitting any video or other media to 10ball.org. It hereby becomes intellectual property of 10ball.org and its licensors.
-                                            <br>
-                                            
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button">I Have Read the above Terms And Conditions</button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
                     </div>
                     
                 </div>
@@ -254,6 +268,6 @@
         <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
     <script src="../../../src/js/app_config.js"></script>
-    <script src="signUp.js"></script>
+    <script src="profileSetUp.js"></script>
 </body>
 </html>

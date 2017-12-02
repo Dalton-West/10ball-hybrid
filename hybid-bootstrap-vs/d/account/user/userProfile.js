@@ -128,5 +128,26 @@ if(uid == null){
 
 //Update Profile Section
 function updateProfile(){
-  
+  //Avatar
+  //First Last Name
+  //Display Name
+  //Update Email
+  //Update Password
+  //Link Facebook
+  //Link Google
+  //Disable Account
+  //Delete Account
+
+}
+
+function updateMailingAndBilling(){
+  //Get Values
+  //Change Data
+  //Save
+}
+
+function ticketsPurchasedTab(){
+  //Show Purchase History
+  //Else
+  //Player Has Not Played In a tournament
 }

@@ -47,7 +47,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       providerData : user.providerData
   }
   localStorage.setItem("firebase_user_data",  JSON.stringify(firebaseUserDataAuth));
-   /* if (emailVerified == false){
+    if (emailVerified == false){
       //alert("Attention " + email + "! Please check your email! For the verifcation message!");
       var emailVerifiedError = document.createElement("p"); 
       var verifiedFalseError = document.createTextNode("Error : " + "Attention " + email + "! Please check your email! For the verifcation message!"); 
@@ -58,7 +58,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     }else {
       
-    }*/
+    }
     // [START_EXCLUDE]
 	  //console.log("A user is signed in See Below");
 	  console.log(user);
