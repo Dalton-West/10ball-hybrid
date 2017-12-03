@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>10ball.org | : Step 2 Sign Up</title>
@@ -12,13 +13,16 @@
     <link rel="stylesheet" href="../../../src/style.css" />
     <!-- Import Bootstrap-->
     <link rel="stylesheet" href="../../../src/css/bootstrap.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
     <script src="../../../src/js/bootstrap.js"></script>
     <!-- Import Font Awesome -->
     <link rel="stylesheet" href="../../../src/css/font-awesome.css">
 
 </head>
+
 <body>
     <section id="header">
         <div class="container-fluid">
@@ -42,7 +46,8 @@
             <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-sticky">
                 <!-- Navigation -->
                 <!-- Hamburger Menu Button Responsive -->
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav"
+                    aria-expanded="false" aria-label="Toggle Navigation">
                     <span class="fa fa-bars"></span>
                 </button>
                 <!-- Links -->
@@ -61,9 +66,12 @@
                         <a class="nav-item nav-link" href="../../about/index.html">About Us</a>
                     </div>
                     <div class="nav navbar-nav ml-auto">
-                        <a class="nav-item nav-link" href="../user/index.html" id="userProfile"><span class="fa fa-user-circle"></span> User Profile</a>
-                        <a class="nav-item nav-link" href="../signIn/index.html" id="logIn"><span class="fa fa-sign-in"></span> Log In</a>
-                        <a class="nav-item nav-link d-none" href="#" id="logOut"><span class="fa fa-sign-out"></span> Log Out</a>
+                        <a class="nav-item nav-link" href="../user/index.html" id="userProfile">
+                            <span class="fa fa-user-circle"></span> User Profile</a>
+                        <a class="nav-item nav-link" href="../signIn/index.html" id="logIn">
+                            <span class="fa fa-sign-in"></span> Log In</a>
+                        <a class="nav-item nav-link d-none" href="#" id="logOut">
+                            <span class="fa fa-sign-out"></span> Log Out</a>
                     </div>
                 </div>
             </nav>
@@ -74,21 +82,51 @@
             <div class="row fill-page">
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-right: solid black 2px;">
                     <!-- Left Box Pannel -->
-					<div id="left_content_box">
-						<br>
-						<img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
-						<img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid"/>
-						<img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
-					</div>
-					
+                    <div id="left_content_box">
+                        <br>
+                        <img src="../../../img/pool4.jpg" height="150" alt="Pool Balls" class="img-fluid" />
+                        <img src="../../../img/poolpic.jpg" height="150" alt="Pool Table shooting cue ball!" class="img-fluid" />
+                        <img src="../../../img/bw.jpg" height="150" alt="Pool Balls Black and White" class="img-fluid" />
+                    </div>
+
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12" style="background-color: white;">
                     <!-- Content Box -->
                     <div id="registerContent">
-                            <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
-                                    <h2>Please complete the signup process.</h2>
-                                    <p> If you do not fill this info out you will get errors later in our application</p>
-                                     <div class="row">
+                        <form role="form" id="registerForm" name="registerForm" onSubmit="return false" method="post">
+                            <h2>Please complete the signup process.</h2>
+                            <p> If you do not fill this info out you will get errors later in our application</p>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                        <div id="fName-error" class="error-message"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                                        <div id="lName-error" class="error-message"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+                                <div id="displayName-error" class="error-message"></div>
+                            </div>
+                            <div id="mailingAndBillingAddress">
+                                <h5 class="text-center">Mailing and Billing Address</h5>
+                                <p>It is very
+                                    <b>IMPORTANT</b> that this section is filled out. If this section is not filled out then
+                                    <b>
+                                        <u>YOU WILL NOT RECIEVE A CHECK IF YOU WIN</u>
+                                    </b>!</p>
+                                <form role="form">
+                                    <h5>Mailing Address
+                                        <br>
+                                        <small>If you win this is where we will send the check</small>
+                                    </h5>
+                                    <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-6">
                                             <div class="form-group">
                                                 <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
@@ -97,136 +135,126 @@
                                         </div>
                                         <div class="col-xs-12 col-sm-6 col-md-6">
                                             <div class="form-group">
-                                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
+                                                <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2">
                                                 <div id="lName-error" class="error-message"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="displayName" id="displayName" class="form-control input-lg" placeholder="Display Name" tabindex="3">
-                                        <div id="displayName-error" class="error-message"></div>
+                                        <input type="text" name="addressLine1" id="addressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
+                                        <div id="addressLine1-error" class="error-message"></div>
                                     </div>
-                                    <div id="mailingAndBillingAddress">
-                                        <h5 class="text-center">Mailing and Billing Address</h5>
-                                        <p>It is very <b>IMPORTANT</b> that this section is filled out. If this section is not filled out then <b><u>YOU WILL NOT RECIEVE A CHECK IF YOU WIN</u></b>!</p>
-                                        <form role="form">
-                                        <h5>Mailing Address<br><small>If you win this is where we will send the check</small></h5>
-                                            <div class="row">
-                                               <div class="col-xs-12 col-sm-6 col-md-6">
-                                                   <div class="form-group">
-                                                       <input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                                                       <div id="fName-error" class="error-message"></div>
-                                                   </div>
-                                               </div>
-                                               <div class="col-xs-12 col-sm-6 col-md-6">
-                                                   <div class="form-group">
-                                                       <input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
-                                                       <div id="lName-error" class="error-message"></div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="addressLine1" id="addressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
-                                               <div id="addressLine1-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="addressLine2" id="addressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
-                                               <div id="addressLine2-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="stateRegion" id="stateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
-                                               <div id="stateRegion-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="zipPostalCode" id="zipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
-                                               <div id="zipPostalCode-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="1">
-                                               <div id="country-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="tel" name="mailingTel" id="mailingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
-                                               <div id="mailingTel-error" class="error-message"></div>
-                                           </div>
-                                       <h5>Billing Address</h5>
-                                            <div class="row">
-                                               <div class="col-xs-12 col-sm-6 col-md-6">
-                                                   <div class="form-group">
-                                                       <input type="text" name="billingFirstName" id="billingFirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                                                       <div id="billingFName-error" class="error-message"></div>
-                                                   </div>
-                                               </div>
-                                               <div class="col-xs-12 col-sm-6 col-md-6">
-                                                   <div class="form-group">
-                                                       <input type="text" name="billinLastName" id="billingLastName" class="form-control input-lg" placeholder="Last Name" tabindex="2" >
-                                                       <div id="billingLName-error" class="error-message"></div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="billingAddressLine1" id="billingAddressLine1" class="form-control input-lg" placeholder="Street Address" tabindex="1">
-                                               <div id="billingAddressLine1-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="billingAddressLine2" id="billingAddressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ." tabindex="1">
-                                               <div id="billingAddressLine2-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="billingStateRegion" id="billingStateRegion" class="form-control input-lg" placeholder="State / Region / Province" tabindex="1">
-                                               <div id="billingStateRegion-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="billingZipPostalCode" id="billingZipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code" tabindex="1">
-                                               <div id="billingZipPostalCode-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="text" name="billingCountry" id="billingCountry" class="form-control input-lg" placeholder="Country" tabindex="1">
-                                               <div id="billingCountry-error" class="error-message"></div>
-                                           </div>
-                                            <div class="form-group">
-                                               <input type="tel" name="billingTel" id="billingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
-                                               <div id="billingTel-error" class="error-message"></div>
-                                           </div>
-                                            <button type="submit" class="btn btn-primary btn-sm float-right">Update Mailing Address</button>
-                                            <br>
-                                        </form>
+                                    <div class="form-group">
+                                        <input type="text" name="addressLine2" id="addressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ."
+                                            tabindex="1">
+                                        <div id="addressLine2-error" class="error-message"></div>
                                     </div>
-                                <div class="row">
-                                        <div class="col-12">
-                                            Please click save before you continue! Thank You.
-                                        </div>
-                                </div>
+                                    <div class="form-group">
+                                        <input type="text" name="stateRegion" id="stateRegion" class="form-control input-lg" placeholder="State / Region / Province"
+                                            tabindex="1">
+                                        <div id="stateRegion-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="zipPostalCode" id="zipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code"
+                                            tabindex="1">
+                                        <div id="zipPostalCode-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                        <div id="country-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" name="mailingTel" id="mailingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                        <div id="mailingTel-error" class="error-message"></div>
+                                    </div>
+                                    <h5>Billing Address</h5>
                                     <div class="row">
-                                        <div class="col-xs-12 col-md-9"><input type="submit" value="Save!" class="btn btn-success btn-block btn-lg" tabindex="7" id="saveData"></div>
-                                        <!-- <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div> -->
-                                    </div>
-                                    <div class="row" hidden id="successMsg">
-                                        <div class="col-12">
-                                            <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="billingFirstName" id="billingFirstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                                                <div id="billingFName-error" class="error-message"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="billinLastName" id="billingLastName" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                                                <div id="billingLName-error" class="error-message"></div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <input type="text" name="billingAddressLine1" id="billingAddressLine1" class="form-control input-lg" placeholder="Street Address"
+                                            tabindex="1">
+                                        <div id="billingAddressLine1-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="billingAddressLine2" id="billingAddressLine2" class="form-control input-lg" placeholder="Apt, Spc, Bldg, Ste, etc . . ."
+                                            tabindex="1">
+                                        <div id="billingAddressLine2-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="billingStateRegion" id="billingStateRegion" class="form-control input-lg" placeholder="State / Region / Province"
+                                            tabindex="1">
+                                        <div id="billingStateRegion-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="billingZipPostalCode" id="billingZipPostalCode" class="form-control input-lg" placeholder="Zip / Postal Code"
+                                            tabindex="1">
+                                        <div id="billingZipPostalCode-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="billingCountry" id="billingCountry" class="form-control input-lg" placeholder="Country" tabindex="1">
+                                        <div id="billingCountry-error" class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" name="billingTel" id="billingTel" class="form-control input-lg" placeholder="Phone Number" tabindex="1">
+                                        <div id="billingTel-error" class="error-message"></div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm float-right">Update Mailing Address</button>
+                                    <br>
                                 </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    Please click save before you continue! Thank You.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-9">
+                                    <input type="submit" value="Save!" class="btn btn-success btn-block btn-lg" tabindex="7"
+                                        id="saveData">
+                                </div>
+                                <!-- <div class="col-xs-12 col-md-3"><p><b>Already have an account? Please <a href="../signIn/index.html">Sign In</a>!</b></p></div> -->
+                            </div>
+                            <div class="row" hidden id="successMsg">
+                                <div class="col-12">
+                                    <p style="color:green; font-size: 16px;" class="text-center">Thank You for creating an account!</p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    
+
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-none" style="background-color: yellow; border-left: solid black 2px;">
-                   <!-- Right Box Pannel -->
-					<div id="advert_box_right">
-						<br>
-					<a href="http://www.muellers.com/" target="_blank">
-                        <img src="../../../img/right_side_adverts/Muellers-Logo-Md.png" alt="Advertier Muellers Logo" class="img-fluid" height="150">
-                    </a>
-                    <a href="https://cuestix.com/" target="_blank">
-                        <img src="../../../img/right_side_adverts/cuestix.png" alt="Advertiser Cuestix.com Logo" class="img-fluid" style="background-color: black;" height="150">
-                    </a>
-                    <a href="http://billiardcue.com/index.htm" target="_blank">
-                        <img src="../../../img/right_side_adverts/billardcue.jpg" alt="Advertiser BilliardCue.com" class="img-fluid" height="150"/>
-                    </a>
-                    <a href="http://www.1stpawnllc.com" target="_blank">
-                        <img src="../../../img/right_side_adverts/1stpawnlogo-gray_1_orig.jpg" alt="Advertiser First Pawn LLC" class="img-fluid" height="150"/>
-						</a>
-					</div>
+                    <!-- Right Box Pannel -->
+                    <div id="advert_box_right">
+                        <br>
+                        <a href="http://www.muellers.com/" target="_blank">
+                            <img src="../../../img/right_side_adverts/Muellers-Logo-Md.png" alt="Advertier Muellers Logo" class="img-fluid" height="150">
+                        </a>
+                        <a href="https://cuestix.com/" target="_blank">
+                            <img src="../../../img/right_side_adverts/cuestix.png" alt="Advertiser Cuestix.com Logo" class="img-fluid" style="background-color: black;"
+                                height="150">
+                        </a>
+                        <a href="http://billiardcue.com/index.htm" target="_blank">
+                            <img src="../../../img/right_side_adverts/billardcue.jpg" alt="Advertiser BilliardCue.com" class="img-fluid" height="150"
+                            />
+                        </a>
+                        <a href="http://www.1stpawnllc.com" target="_blank">
+                            <img src="../../../img/right_side_adverts/1stpawnlogo-gray_1_orig.jpg" alt="Advertiser First Pawn LLC" class="img-fluid"
+                                height="150" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,25 +262,39 @@
     <section id="footer">
         <div class="container-fluid text-center">
             <footer class="row footer-custom footer-pt1">
-                <div class="col-xl-3 col-lg-3 col-md-3" >
+                <div class="col-xl-3 col-lg-3 col-md-3">
                     <!-- Left Box -->
-                    <h6><b>Follow Us On social media</b></h6>
-                    <a href="https://www.facebook.com/10ballAdmin/"><span class="fa fa-facebook"> @10balladmin</span></a>
+                    <h6>
+                        <b>Follow Us On social media</b>
+                    </h6>
+                    <a href="https://www.facebook.com/10ballAdmin/">
+                        <span class="fa fa-facebook"> @10balladmin</span>
+                    </a>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3">
                     <!-- Left 2 Box -->
-                    <h6><b>About</b></h6>
-                    <p>© <a href="http://10ball.org">The Ghost Tour | 10ball.org</a> 2017</p>
+                    <h6>
+                        <b>About</b>
+                    </h6>
+                    <p>©
+                        <a href="http://10ball.org">The Ghost Tour | 10ball.org</a> 2017</p>
                     <p>All rights reserved</p>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3">
                     <!-- Left 2 Box -->
-                    <h6><b>Our Partners</b></h6>
-                    <p>Currently The Ghost Tour is not partnered with any other companies! Want to partner with us? Send Us an email to <a href="mailto:">10ballsite@gmail.com</a></p>
+                    <h6>
+                        <b>Our Partners</b>
+                    </h6>
+                    <p>Currently The Ghost Tour is not partnered with any other companies! Want to partner with us? Send Us
+                        an email to
+                        <a href="mailto:">10ballsite@gmail.com</a>
+                    </p>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3">
                     <!-- Right Box -->
-                    <h6><b>Recent Tournament Winners</b></h6>
+                    <h6>
+                        <b>Recent Tournament Winners</b>
+                    </h6>
                     <ol>
                         <li>No Winners Yet! Grab a ticket and play!</li>
                     </ol>
@@ -260,14 +302,15 @@
             </footer>
         </div>
     </section>
-        <!-- Configure Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
+    <!-- Configure Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase-storage.js"></script>
     <script src="../../../src/js/app_config.js"></script>
     <script src="profileSetUp.js"></script>
 </body>
+
 </html>

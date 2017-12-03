@@ -9,28 +9,18 @@ emailRegisterBtn.addEventListener("click", dataToDataBase, false);
 
 facebookSignUpBtn.addEventListener("click", signUpWithFacebook, false);
 
-googleSignUpBtn.addEventListener("click",signUpWithGoogle, false);
+googleSignUpBtn.addEventListener("click", signUpWithGoogle, false);
 
-
-//Realtime authentication listener
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      dataToDataBase();
-    } else {
-      // No user is signed in.
-    }
-  });
 
 //Sign Up with email
-function signUpWithEmail(){
+function signUpWithEmail() {
     // Get Form Data Fields
     var firstName = document.querySelector("#firstName").value;
     var lastName = document.querySelector("#lastName").value;
     var displayName = document.querySelector("#displayName").value;
     var email = document.querySelector("#userEmail").value;
     var password = document.querySelector("#userPassword").value;
-    
+
     var _UserData = {
         firstName: firstName,
         lastName: lastName,
@@ -39,10 +29,9 @@ function signUpWithEmail(){
         userCreated: Date()
         //timestamp: db.FieldValue.serverTimestamp()
     };
-    if (typeof(Storage) !== "undefined") {
+    if (typeof (Storage) !== "undefined") {
         // Store
-        localStorage.setItem("user_data_key",  JSON.stringify(_UserData));
-         ;
+        localStorage.setItem("user_data_key", JSON.stringify(_UserData));;
     } else {
         document.getElementById("#content").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
@@ -51,43 +40,44 @@ function signUpWithEmail(){
 }
 
 //Get Data And Post To Database
-function dataToDataBase(){
+function dataToDataBase() {
     // Retrieve
     var storedData = localStorage.getItem("user_data_key");
     if (storedData != "") {
         var usersDataInput = JSON.parse(storedData);
         console.log("The Data Entered into the form is" + usersDataInput);
         return usersDataInput;
-    } else{
+    } else {
         console.log("No data found");
     }
     updateProfile();
 }
-function updateProfile(){
+
+function updateProfile() {
     var user = firebase.auth().currentUser;
     user.updateProfile({
-      displayName: usersDataInput.displayName,
-      photoURL: ""
-    }).then(function() {
-      // Update successful.
-      console.log("Profile Updated");
-    }).catch(function(error) {
-      // An error happened.
-      console.log("Profile Update Failed");
+        displayName: usersDataInput.displayName,
+        photoURL: "."
+    }).then(function () {
+        // Update successful.
+        console.log("Profile Updated");
+    }).catch(function (error) {
+        // An error happened.
+        console.log("Profile Update Failed");
     });
 }
 //Sign Up with Facebook
-function signUpWithFacebook(){
+function signUpWithFacebook() {
 
     console.log("Facebook Clicked");
     return true;
 }
 //Sign Up with Google
-function signUpWithGoogle(){
+function signUpWithGoogle() {
     console.log("Google Clicked");
     return true;
 }
 //setErrors For Signup form
-function setError(id, message){
-	document.getElementById(id + "-error").innerHTML = message;
+function setError(id, message) {
+    document.getElementById(id + "-error").innerHTML = message;
 }
