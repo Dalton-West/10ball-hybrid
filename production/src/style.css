@@ -1,91 +1,125 @@
-﻿body
-{
-     margin: 0;
+﻿body {
+	margin: 0;
 }
+
 #header {
-    background-color: black;
+	background-color: black;
 }
+
 #navigate {
-    width: 100%;
+	width: 100%;
 }
-#contnent {display: block;}
-.fill-page{
-    min-height: 100vh;
+
+#contnent {
+	display: block;
 }
+
+.fill-page {
+	min-height: 100vh;
+}
+
 .footer-custom {
-    color: snow;
-    background-color: black;
-    padding-top: 10px;
-    padding-bottom:10px;
+	color: snow;
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
+
 .footer-pt1 {
-    height:auto;
+	height: auto;
 }
+
 .footer-pt2 {
-    height: 20px;
+	height: 20px;
 }
+
 .pg-active {
 	color: white;
-    background-color: black;
+	background-color: black;
 }
+
+
 /* Credit to bootsnipp.com for the css for the color graph */
+
 .colorgraph {
-		height: 5px;
-		border-top: 0;
-		background: #c4e17f;
-		border-radius: 5px;
-		background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-        background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-        background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-        background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	height: 5px;
+	border-top: 0;
+	background: #c4e17f;
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
 
 /* Custom Data for account section */
+
 .orSplit {
 	width: 100%;
 	height: 15px;
 	border-bottom: 2px solid #AAAAAA;
 	text-align: center;
 }
-.orSplit .orSplitContent{
+
+.orSplit .orSplitContent {
 	font-size: 20px;
 	padding: 0 10px;
 	background-color: #ffffff;
 }
+
 .btn-social-media button {
-	color: white; /* In yourUse @body-bg */
-	opacity:0.85;
+	color: white;
+	/* In yourUse @body-bg */
+	opacity: 0.85;
 }
+
 .btn-social-media button:hover {
-    color: white;
-	opacity:1;    	
+	color: white;
+	opacity: 1;
 }
-.btn-facebook {background: #3b5998;}
-.btn-google {background: #c32f10;}
+
+.btn-facebook {
+	background: #3b5998;
+}
+
+.btn-google {
+	background: #c32f10;
+}
+
 
 /* Table Nav */
+
 .colorSnow {
 	color: snow;
 }
+
 .error-message {
 	color: red;
 	font-weight: bold;
 }
+
+
 /* Ticket For Tournament */
+
 
 /*  Terms Of Service CSS */
 
+
 /* Hide Underline of A elements */
+
 a :hover {
 	text-decoration: none;
 }
 
-/* User Dashboard Navigation*/ 
+
+/* User Dashboard Navigation*/
+
 .userLeftPannel {
-    color: snow;
-    text-decoration: none;
+	color: snow;
+	text-decoration: none;
 }
-.snowBottomBorder{
+
+.snowBottomBorder {
 	border-bottom: 2px solid snow;
 }
